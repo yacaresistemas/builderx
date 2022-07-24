@@ -1,18 +1,16 @@
 import React from 'react'
-import {Navbar, Nav} from 'react-bootstrap'
-import {LinkContainer} from 'react-router-bootstrap'
-import { Routes, Route, Outlet, NavLink, Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import TemasList from "../components/TemasList";
 
 function Temas() {
     return (
       <>
-        <main>
-          <h2>Estoy en Temas</h2>
-          <p>mi texto en temas</p>
-        </main>
-        <nav>
-          <Link to="/">Ir a Inicio</Link>
-        </nav>
+        <Container style={{marginTop: 30}}>
+          <Row>
+            <TemasList /> 
+          </Row>            
+        </Container>               
       </>
     );
   }

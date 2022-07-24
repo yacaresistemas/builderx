@@ -1,18 +1,27 @@
 import React from 'react'
-import {Navbar, Nav} from 'react-bootstrap'
-import {LinkContainer} from 'react-router-bootstrap'
-import { Routes, Route, Outlet, NavLink, Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 function Contacto() {
     return (
       <>
         <main>
-          <h2>Estoy en Contacto</h2>
-          <p>mi texto en Contacto</p>
-        </main>
+          <Container style={{marginTop: 30}}>
+            <Row>
+              <Col lg="4">
+                En Contacto
+              </Col>
+            </Row>            
+          </Container>
+        </main> 
         <nav>
-          <Link to="/">Ir a Inicio</Link>
-        </nav>
+          <Link to="/">
+            <Button variant="primary">Ir a Inicio</Button>
+          </Link>
+        </nav>       
       </>
     );
   }

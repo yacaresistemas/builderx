@@ -1,18 +1,27 @@
 import React from 'react'
-import {Navbar, Nav} from 'react-bootstrap'
-import {LinkContainer} from 'react-router-bootstrap'
-import { Routes, Route, Outlet, NavLink, Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 function Ingresar() {
     return (
       <>
         <main>
-          <h2>Estoy en Ingresar</h2>
-          <p>mi texto en Ingresar</p>
-        </main>
+          <Container style={{marginTop: 30}}>
+            <Row>
+              <Col lg="4">
+                En Ingresar
+              </Col>
+            </Row>            
+          </Container>
+        </main> 
         <nav>
-          <Link to="/">Ir a Inicio</Link>
-        </nav>
+          <Link to="/">
+            <Button variant="primary">Ir a Inicio</Button>
+          </Link>
+        </nav>       
       </>
     );
   }

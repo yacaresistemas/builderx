@@ -1,20 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons'
-import { Routes, Route, Outlet, NavLink, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap'
 
-import Header from './components/Header.js'
-
-
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 import Inicio from './pages/Inicio'
 import Temas from './pages/Temas'
