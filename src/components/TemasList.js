@@ -5,16 +5,16 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 const arrayTemas = [
-    { src: Tema1, titulo: "Tema 1", descripcion: "Personalizar el tema 1" },
-    { src: Tema1, titulo: "Tema 2", descripcion: "Personalizar el tema 2" },
+    { id: 1, src: Tema1, titulo: "Tema 1", descripcion: "Personalizar el tema 1" },
+    { id: 2,  src: Tema1, titulo: "Tema 2", descripcion: "Personalizar el tema 2" },
   ];
   
 const TemasList = () => {
     return (
         <>
         {
-            arrayTemas.map(({ src, titulo, descripcion }) => (
-                <Col lg="4">
+            arrayTemas.map(({ id, src, titulo, descripcion }) => (
+                <Col lg="4" key={id}>
                     <Card style={{ width: '18rem' }}>
                         <img src={src} style={{height: 250}} alt={titulo} />
                         <Card.Body>

@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import TemasList from "../components/TemasList";
 
-function Temas() {
+function Temas(props) {
+    useEffect(() => {
+      document.title = props?.title ? props?.title : 'BuilderX';
+    });
+
     return (
       <>
         <Container style={{marginTop: 30}}>

@@ -70,13 +70,13 @@ function App() {
         </Container>
       </Navbar>
       <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="builderx" element={<Inicio />} />
+        <Route path="/" element={<Inicio title="BuilderX" />} />
+        <Route path="builderx" element={<Inicio title="BuilderX" />} />
         
-        <Route path="temas" element={<Temas />} />
-        <Route path="contacto" element={<Contacto />} />
-        <Route path="ingresar" element={<Ingresar />} />
-        <Route path="registrarse" element={<Registrarse />} />
+        <Route path="temas" element={<Temas title="Temas"/>} />
+        <Route path="contacto" element={<Contacto title="Contacto" />} />
+        <Route path="ingresar" element={<Ingresar title="Ingresar" />} />
+        <Route path="registrarse" element={<Registrarse title="Registrarse" />} />
       </Routes>
     </div>
   );
