@@ -5,7 +5,7 @@ import TemasList from "../components/TemasList";
 
 function Temas(props) {
     useEffect(() => {
-      document.title = props?.title ? props?.title : 'BuilderX';
+      document.title = props?.title ? props.title : 'BuilderX';
     });
 
     return (

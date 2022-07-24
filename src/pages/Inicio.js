@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 function Inicio(props) {
 
     useEffect(() => {
-      document.title = props?.title ? props?.title : 'BuilderX';
+      document.title = props?.title ? props.title : 'BuilderX';
     });
     
     return (
