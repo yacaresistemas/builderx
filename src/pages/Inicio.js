@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React, { useEffect } from 'react'
+import { Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+import BannerPrincipal from '../components/BannerPrincipal'
+
 
 function Inicio(props) {
 
@@ -14,17 +13,13 @@ function Inicio(props) {
     return (
       <>
         <main>
-          <Container style={{marginTop: 30}}>
-            <Row>
-              <Col lg="4">
-                En Inicio
-              </Col>
-            </Row>            
+          <Container fluid style={{marginTop: 60, marginBottom: 100, backgroundColor: "#0F6972"}}>
+            <BannerPrincipal />
           </Container>
         </main> 
         <nav>
-          <Link to="/temas">
-            <Button variant="primary">Ir a Temas</Button>
+          <Link to="/plantillas" >
+            <Button variant="primary">Ir a Plantillas</Button>
           </Link>
         </nav>       
       </>

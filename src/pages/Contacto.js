@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React, { useEffect } from 'react'
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+import TituloPagina from "../components/TituloPagina";
 
 function Contacto(props) {
 
@@ -14,6 +12,7 @@ function Contacto(props) {
     return (
       <>
         <main>
+          <TituloPagina titulo="Contacto" />
           <Container style={{marginTop: 30}}>
             <Row>
               <Col lg="4">

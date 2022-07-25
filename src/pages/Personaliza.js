@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import { Container, Row, Col, Button }  from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import TituloPagina from "../components/TituloPagina";
 
-function Registrarse(props) {
+function Personaliza(props) {
 
     useEffect(() => {
       document.title = props?.title ? props.title : 'BuilderX';
@@ -12,11 +12,11 @@ function Registrarse(props) {
     return (
       <>
         <main>
-          <TituloPagina titulo="Registrarse" />
+          <TituloPagina titulo="Personaliza tu Perfil" />
           <Container style={{marginTop: 30}}>
             <Row>
               <Col lg="4">
-                En Registrarse
+                En Personaliza
               </Col>
             </Row>            
           </Container>
@@ -30,4 +30,4 @@ function Registrarse(props) {
     );
   }
 
-export default Registrarse
+export default Personaliza
