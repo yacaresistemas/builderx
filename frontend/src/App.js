@@ -9,6 +9,9 @@ import ComoFunciona from './pages/ComoFunciona'
 import Contacto from './pages/Contacto'
 import Ingresar from './pages/Ingresar'
 import Registrarse from './pages/Registrarse'
+import Blog from './pages/Blog'
+import BlogDetalle from './pages/BlogDetalle'
+
 
 // Components
 import BarraNavegacion from './components/BarraNavegacion'
@@ -29,6 +32,8 @@ function App() {
         <Route path="contacto" element={<Contacto title="Contacto" />} />
         <Route path="ingresar" element={<Ingresar title="Ingresar" />} />
         <Route path="registrarse" element={<Registrarse title="Registrarse" />} />
+        <Route path="blog" element={<Blog title="Blog" />} />
+        <Route path="blog-detalle" element={<BlogDetalle title="Detalle del Blog" />} />
       </Routes>
       <Footer />
     </div>

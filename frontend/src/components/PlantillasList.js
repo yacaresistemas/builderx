@@ -1,34 +1,19 @@
 import React from 'react'
 import { Col, Card, Button}  from 'react-bootstrap'; 
-import apiClient from "../apiclient";
+import Plantilla1 from "../img/plantilla1.png";
+import Plantilla2 from "../img/plantilla2.jpg";
+
+const arrayPlantillas = [
+    { id: 1, imagen: Plantilla1, titulo: "Plantilla Nice", descripcion: "Personaliza la Plantilla Nice" },
+    { id: 2,  imagen: Plantilla2, titulo: "Plantilla Hot", descripcion: "Personalizar la Plantilla Hot" },
+  ];
 
 export default class PlantillasList extends React.Component {
-    state = {
-        arrayPlantillas: []
-    }    
-
-    async obtenerPlantillas() {
-        try {
-            const res = await apiClient.get("/productos");
-            const result = {
-                status: res.status + "-" + res.statusText,
-                headers: res.headers,
-                data: res.data,
-            };
-            const arrayPlantillas = result.data;
-            this.setState({ arrayPlantillas });
-        } catch (err) {
-            console.log(err.response?.data || err);            
-        }
-    }
-
-    componentDidMount() {
-        this.obtenerPlantillas()
-    }
+    
     
     render() {
         return (
-            this.state.arrayPlantillas.map(({ id, nombre, resumen, imagen }) => (
+            arrayPlantillas.map(({ id, nombre, resumen, imagen }) => (
                 <Col lg="4" key={id}>
                     <Card style={{ width: '18rem', alignItems: 'center', marginTop: 20 }}>
                         <img src={imagen} style={{height: 350, width: 250}} alt={nombre} />

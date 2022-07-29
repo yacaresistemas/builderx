@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { Container, Row, Col, Button, Card, Form }  from 'react-bootstrap';
 import TituloPagina from "../components/TituloPagina";
-import apiClient from "../apiclient";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -19,40 +18,14 @@ function Ingresar(props) {
       .required("Contraseña es requerido"),   
     });
 
-    const Cerrar = () => {
-      alert(9);
-    }
 
     useEffect(() => {
       document.title = props?.title ? props.title : 'BuilderX';
 
-      var usuarioNombre = sessionStorage.getItem("usuarioNombre");
-      var usuarioId = sessionStorage.getItem("usuarioId");
-      //console.log("usuarioNombre:"+usuarioNombre);
-      //console.log("usuarioId:"+usuarioId);
-
     });
 
     const handleOnSubmit = (values, actions) => {
-      try {
-        
-        const valoresEnviar = { email: values.email, password: values.password };
-        apiClient.post("/login", valoresEnviar)
-        .then(response => {
-          let user = response.data.user
-          toast.success("Ingresaste correctamente. Bienvenido "+user.nombre, {
-
-          });
-          sessionStorage.setItem("usuarioId", user.id);
-          sessionStorage.setItem("usuarioNombre", user.nombre);
-          window.location = 'plantillas';
-        })
-        .catch(error => {
-          console.log(error);
-        });        
-    } catch (err) {
-        console.log(err.response?.data || err);            
-    }
+      toast.success("Ingresaste correctamente");
   };
 
     
@@ -98,7 +71,7 @@ function Ingresar(props) {
                         }) => (
                           <Form noValidate onSubmit={handleSubmit} style={{textAlign: "left", marginTop: 20}}>
                             <Form.Group className="mb-3" controlId="email">
-                              <Form.Label>Email:</Form.Label>
+                              <Form.Label>Email: <span style={{color: "red"}}>*</span></Form.Label>
                               <Form.Control name="email" type="email" placeholder="Ingrese su email" value={values.email}
                               onChange={handleChange}
                             />                           
@@ -108,7 +81,7 @@ function Ingresar(props) {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="password">
-                              <Form.Label>Contraseña</Form.Label>
+                              <Form.Label>Contraseña <span style={{color: "red"}}>*</span></Form.Label>
                               <Form.Control name="password" type="password" placeholder="Contraseña"  value={values.password}
                               onChange={handleChange}/>
                               {touched.password && errors.password ? (
