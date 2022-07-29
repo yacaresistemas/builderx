@@ -29,7 +29,7 @@ Luego de clonar este proyecto para ejecutar el frontend los siguientes comandos
 
 1.- Abrir la carpeta del backend
 ### cd backend
-
+ 
 2.- Instalar dependencias con composer
 ### composer install
 
